@@ -1,0 +1,9 @@
+https://zapier.com/
+Sign in to ZAPIER via your google account.
+On the zapier dashboard, select "Agents" from the left navigation panel to create a new agent. 
+To use Googlesheets as Tools - Add tools > Search Google sheet 
+Configure the Googlesheet tool added. Provide credentials to google drive and select the file with the Ecommerce Checkout incident data.
+Select a trigger ( on demand / schedule)
+Draft a system prompt to cover all the requirements
+Webhook - If you do not have an API endpoint use the webhook.site for generating test URLs and view the Webhook JSON Payload being posted to the same.
+If you want to avoid the webhook step - Use a Google Doc ( add as tool ) and configure the append to document method and test agents capability to generate JSON Payloads as intructed.
