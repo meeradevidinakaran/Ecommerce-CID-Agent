@@ -24,7 +24,8 @@ Is to build an E-commerce Agent in Zapier that reads new checkout events from Go
     e. Action: 
         ALERT: If severity is HIGH. 
         LOG: If severity is LOW (e.g., low value, isolated incident).
-   <img width="1847" height="812" alt="image" src="https://github.com/user-attachments/assets/94bb68ed-a11a-482e-9eb4-0ef29152cdf7" />
+  <img width="1848" height="655" alt="Screenshot 2026-06-17 145950" src="https://github.com/user-attachments/assets/2e1c2821-202d-4490-8f72-7c4b6a048a0f" />
+
 
 3. **Execution & Hand-off**
     a. The agent must write exactly one row to the Agent_Output sheet per decision. 
