@@ -39,4 +39,4 @@ Additional Requirements
 4. Connectivity: The Webhook fires successfully with a valid JSON payload for every decision made.
 
 **System Design**
-assets/CID Agent.png
+assets/CID_Agent.png
