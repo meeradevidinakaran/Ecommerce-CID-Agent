@@ -41,3 +41,6 @@ Additional Requirements
 
 **System Design**
 assets/CID_Agent.png
+
+**Scaling Strategy**
+docs/Scaling_Strategy.md
