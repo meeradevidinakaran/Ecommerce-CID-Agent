@@ -30,7 +30,7 @@ Is to build an E-commerce Agent in Zapier that reads new checkout events from Go
     a. The agent must write exactly one row to the agent_commands sheet per decision. 
     b. Mandatory: The agent must trigger a Webhook (POST request) to broadcast its decision to downstream systems. 
     c. The Webhook JSON body must contain all 9 fields from the command row (action, severity, reason, etc.).
-   
+   data/Webhook Endpoint.png
 
 Additional Requirements 
 1. Zero Duplicates: The agent never processes the same checkout event row twice (State Management works). To Handle this included a Processed Column , to be marked "Yes" each time agent has read and processed the row. 
