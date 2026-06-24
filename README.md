@@ -26,12 +26,15 @@ Is to build an E-commerce Agent in Zapier that reads new checkout events from Go
         LOG: If severity is LOW (e.g., low value, isolated incident).
    <img width="1847" height="812" alt="image" src="https://github.com/user-attachments/assets/94bb68ed-a11a-482e-9eb4-0ef29152cdf7" />
 
-4. **Execution & Hand-off**
+3. **Execution & Hand-off**
     a. The agent must write exactly one row to the agent_commands sheet per decision. 
     b. Mandatory: The agent must trigger a Webhook (POST request) to broadcast its decision to downstream systems. 
     c. The Webhook JSON body must contain all 9 fields from the command row (action, severity, reason, etc.). 
 
 Additional Requirements 
-1. Zero Duplicates: The agent never processes the same checkout event row twice (State Management works). 
-2. Smart Triage: The agent correctly identifies high-value Payment failures as HIGH/ALERT 
-3. Connectivity: The Webhook fires successfully with a valid JSON payload for every decision made. 
+1. Zero Duplicates: The agent never processes the same checkout event row twice (State Management works). To Handle this included a Processed Column , to be marked "Yes" each time agent has read and processed the row. 
+2. Smart Triage: The agent correctly identifies high-value Payment failures as HIGH/ALERT
+3. Human Review Feasibility: Store the CMDs generated for every run inorder to audit or review later on, this gives more debugging capability.
+4. Connectivity: The Webhook fires successfully with a valid JSON payload for every decision made.
+
+**System Design**
