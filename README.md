@@ -27,7 +27,7 @@ Is to build an E-commerce Agent in Zapier that reads new checkout events from Go
    <img width="1847" height="812" alt="image" src="https://github.com/user-attachments/assets/94bb68ed-a11a-482e-9eb4-0ef29152cdf7" />
 
 3. **Execution & Hand-off**
-    a. The agent must write exactly one row to the agent_commands sheet per decision. 
+    a. The agent must write exactly one row to the Agent_Output sheet per decision. 
     b. Mandatory: The agent must trigger a Webhook (POST request) to broadcast its decision to downstream systems. 
     c. The Webhook JSON body must contain all 9 fields from the command row (action, severity, reason, etc.).
    data/Webhook Endpoint.png
