@@ -1,13 +1,13 @@
 # Ecommerce-CID-Agent
 This is an ecommerce checkout incident detection agent, that consistently reviews new events, decides whether the situation warrants attention, and publish a clean “command” for downstream execution. 
 
-**Problem Statement**
+# Problem Statement
 E-commerce teams monitor checkout activity to catch issues that customers face during an order checkout process whcih can impact revenue(especially payment failures). At scale, in real production scenarios hundreds of checkout events may arrive every hour and it’s not practical to manually triage each one of them. 
 
-**Goal**
+# Goal
 Is to build an E-commerce Agent in Zapier that reads new checkout events from Google sheets, evaluates their severity using baseline metrics, and outputs exactly one command per run (ALERT or LOG). The agent does not execute fixes; it only publishes intent via a webhook and updates state. 
 
-**Requirements**
+# Requirements
 1. **State Management (Critical)** 
     a. The agent must read the last_processed_timestamp from the state sheet at the start of every run. 
     b. It must filter the cart_events to only process rows where the timestamp is newer than the stored state and corresponding processed column is empty.
@@ -39,8 +39,12 @@ Additional Requirements
 3. Human Review Feasibility: Store the CMDs generated for every run inorder to audit or review later on, this gives more debugging capability.
 4. Connectivity: The Webhook fires successfully with a valid JSON payload for every decision made.
 
-**System Design**
-assets/CID_Agent.png
+# Solution
+We will be implementing the above logic and build a Zapier agent using Google sheet API and Webhook to a downstream client. Below is a sample Webhook End Point post from the Zapier agent.
+![solution](assets/Webhook_endpoint.png)
 
-**Scaling Strategy**
-docs/Scaling_Strategy.md
+# System Design
+![system_design](assets/CID_SystemDesign.png)
+
+# Scaling Strategy
+![scaling_Strategy](docs/Scaling_Strategy.md)
