@@ -41,7 +41,7 @@ Additional Requirements
 
 # Solution
 We will be implementing the above logic and build a Zapier agent using Google sheet API and Webhook to a downstream client. Below is a sample Webhook End Point post from the Zapier agent.
-![solution](assets/Webhook_endpoint.png)
+![WebhookEndpoint](assets/WebhookEndpoint.png)
 
 # System Design
 ![system_design](assets/CID_SystemDesign.png)
