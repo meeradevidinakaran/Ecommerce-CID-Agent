@@ -47,4 +47,4 @@ We will be implementing the above logic and build a Zapier agent using Google sh
 ![system_design](assets/CID_SystemDesign.png)
 
 # Scaling Strategy
-![scaling_Strategy](docs/Scaling_Strategy.md)
+Full implementation templates and production scaling strategies are maintained in a private repository; access for technical review is available upon request
